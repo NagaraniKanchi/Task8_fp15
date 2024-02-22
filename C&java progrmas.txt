@@ -1,0 +1,233 @@
+* Non-Functional programs:-
+
+Todo1:
+1.
+// Print (a+b)^2
+#include <stdio.h>
+int main() 
+{
+    int a,b,res;
+    a=5;
+    b=7;
+    res=(a*a)+(b*b)+(2*(a*b));
+    printf("(a+b)^2:%d\n",res);
+    a=30; 
+    b=10;
+    res=(a*a)+(b*b)+(2*(a*b));
+    printf("(a+b)^2:%d\n",res);
+    a=19; 
+    b=11;
+    res=(a*a)+(b*b)+(2*(a*b));
+    printf("(a+b)^2:%d\n",res);
+    return 0;
+}
+2.
+
+// Average of Two Numbers
+#include <stdio.h>
+int main() 
+{
+   int a,b,c;
+   float avg;
+   a=20,b=40,c=30;
+   avg=(a+b+c)/3;
+   printf("Average=%f\n",avg);
+   a=30,b=88,c=77;
+   avg=(a+b+c)/3;
+   printf("Average=%f\n",avg);
+   a=99,b=11,c=77;
+   avg=(a+b+c)/3;
+   printf("Average=%f\n",avg);
+    return 0;
+}
+3.
+
+// Biggest of Two numbers
+#include <stdio.h>
+int main() 
+{
+    int x,y,res;
+    x=40,y=30;
+    res=x>y?x:y;
+    printf("big num=%d\n",res);
+    x=60,y=70;
+    res=x>y?x:y;
+    printf("big num=%d\n",res);
+    x=55,y=77;
+    res=y>x?y:x;
+    printf("big num=%d\n",res);
+    
+    return 0;
+}
+
+4.
+// Print Area of Circle
+#include <stdio.h>
+
+int main() 
+{
+    const float pi=3.14;
+    float r,res;
+    r=52;
+    res=pi*(r*r);
+    printf("%f\n",res);
+    r=32;
+    res=pi*(r*r);
+    printf("%f\n",res);
+    r=55;
+    res=pi*(r*r);
+    printf("%f\n",res);
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------------
+Todo2:
+
+*Funtional programs in C:-
+
+1.
+// Print (a+b)^2
+#include <stdio.h>
+//preparation of function
+void squareOfAplusB(int a,int b)  // called function
+{
+    int res;
+    res=(a*a)+(b*b)+(2*(a*b));
+    printf("(a+b)^2:%d\n",res);
+}
+int main() 
+{
+     //function usage
+     squareOfAplusB(20,40);//calling function
+     squareOfAplusB(32,42);
+     return 0;
+}
+2.
+// Print Average of Three Numbers
+#include <stdio.h>
+//preparation of function
+ void  avgOfThreeNum(int a,int b,int c)  // called function
+{
+   float avg;
+   avg=(a+b+c)/3;
+   printf("Average=%f\n",avg);
+}
+int main() 
+{
+     //function usage
+     avgOfThreeNum(20,55,33); //calling function
+     avgOfThreeNum(66,25,43);
+     return 0;
+}
+
+3.
+// print Biggest of Two Numbers
+#include <stdio.h>
+//Function Preparation
+void findBigNum(int x, int y) //Called function
+{
+    int res;
+    res=x>y?x:y;
+    printf("big number=%d\n",res);
+}
+int main() {
+    findBigNum(30,15); // calling function
+    findBigNum(110,90);
+    findBigNum(220,119);
+    return 0;
+}
+4.
+
+// print Area of Circle
+#include <stdio.h>
+//Function Preparation
+void findAreaofCircle(float r,const float pi) //Called function
+{
+    float res;
+    res=pi*(r*r);
+    printf("%f\n",res);
+}
+int main() {
+    findAreaofCircle(3,3.14); // calling function
+    findAreaofCircle(15,3.14);
+    findAreaofCircle(2,3.14);
+    return 0;
+}
+
+Todo3:
+Functional programs in Java:-
+--------------------------------------------------------------------------------------------------------------
+1.
+ // Print (a+b)^2
+class Square
+{
+    static public void findSquare(int a, int b)
+    {
+        int result;
+        result=(a*a)+(b*b)+(2*(a*b));
+        System.out.println("\n(a+b)^2="+result);
+    }
+}
+public class Sqar{
+    public static void main(String[] args)
+    {
+    Square.findSquare(20,40);
+    Square.findSquare(10,30);
+    }
+}
+
+2.
+
+// Find Average of Two Numbers
+class Show
+{
+    static public void findAverage(int n1, int n2,int n3)
+    {
+        float avg;
+        avg=(n1+n2+n3)/3;
+        System.out.println("Average of three numbers:\n"+avg);
+    }
+}
+public class Avg{
+    public static void main(String[] args)
+    {
+    Show.findAverage(20,40,50);
+    Show.findAverage(10,30,60);
+    }
+}
+3.
+// Find Biggest of Two numbers
+public class Big
+{
+    static public void findBigNumber(int n1,int n2)
+    {
+        int result;
+        result=n1>n2?n1:n2;
+        System.out.println(result);
+    }
+public static void main(String[] args)
+ {
+     Big.findBigNumber(20,50);
+     Big.findBigNumber(60,30);
+ }
+}
+
+4.
+// Area of circle=pir^2;
+class Area
+{
+    public static void findAreaofCircle(int r)
+    {
+        double res, pi=3.1415;
+        res=pi*r*r;
+        System.out.println(res);
+    }
+}
+class Main
+{
+    public static void main(String[] args)
+    {
+      Area.findAreaofCircle(20);
+      Area.findAreaofCircle(36);
+      
+    }
+}
